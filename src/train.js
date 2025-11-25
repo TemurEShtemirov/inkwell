@@ -1,92 +1,32 @@
-import * as tf from "@tensorflow/tfjs-node";
 import fs from "fs";
-import path from "path";
+import { tokenize } from "./tokenize.js"; //tokenize function
+import cliProgress from "cli-progress";
 
-//NOTE LOAD DATASET
-const dataDir = "./dataset";
-let text = "";
+// Simple Markov chain trainer
+export function train(textData) {
+  const tokens = tokenize(textData); // ["experienced", "software", "engineer", ...]
+  const markov = {};
 
-const files = fs.readdirSync(dataDir);
-files.forEach((file) => {
-  text += fs.readFileSync(path.join(dataDir, file), "utf8") + "\n\n";
-});
+  console.log(`Starting training on ${tokens.length} tokens...`);
 
-console.log("Dataset characters:", text.length);
+  const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
+  bar.start(tokens.length - 1, 0);
 
-//NOTE  CHARACTER MAPPING
-const chars = Array.from(new Set(text));
-const vocabSize = chars.length;
+  // Build Markov table
+  for (let i = 0; i < tokens.length - 1; i++) {
+    const token = tokens[i];
+    const nextToken = tokens[i + 1];
 
-const char2idx = {};
-const idx2char = {};
+    if (!markov[token]) markov[token] = [];
+    markov[token].push(nextToken);
 
-chars.forEach((c, i) => {
-  char2idx[c] = i;
-  idx2char[i] = c;
-});
+    bar.update(i + 1);
+  }
 
-// Encode whole dataset
-const encoded = Array.from(text).map((c) => char2idx[c]);
+  bar.stop();
 
-//NOTE SEQUENCE GENERATION
-const seqLen = 100;
-let xs = [];
-let ys = [];
+  fs.writeFileSync("tokens.json", JSON.stringify(tokens, null, 2));
+  fs.writeFileSync("markov.json", JSON.stringify(markov, null, 2));
 
-for (let i = 0; i < encoded.length - seqLen; i++) {
-  const inputSeq = encoded.slice(i, i + seqLen);
-  const outputChar = encoded[i + seqLen];
-  xs.push(inputSeq);
-  ys.push(outputChar);
+  console.log("Training done, tokens and Markov table saved!");
 }
-
-const X = tf.tensor2d(xs, [xs.length, seqLen]);
-const Y = tf.oneHot(tf.tensor1d(ys, "int32"), vocabSize);
-
-//NOTE MODEL BUILD
-const model = tf.sequential();
-
-model.add(
-  tf.layers.embedding({
-    inputDim: vocabSize,
-    outputDim: 64,
-    inputLength: seqLen,
-  })
-);
-
-model.add(
-  tf.layers.lstm({
-    units: 128,
-    returnSequences: false,
-  })
-);
-
-model.add(
-  tf.layers.dense({
-    units: vocabSize,
-    activation: "softmax",
-  })
-);
-
-model.compile({
-  loss: "categoricalCrossentropy",
-  optimizer: tf.train.adam(0.002),
-});
-
-model.summary();
-
-//NOTE TRAIN
-(async () => {
-  await model.fit(X, Y, {
-    epochs: 25,
-    batchSize: 64,
-    callbacks: {
-      onEpochEnd: (e, logs) => console.log(`Epoch ${e}: loss=${logs.loss}`),
-    },
-  });
-
-  await model.save("file://./saved-model");
-  fs.writeFileSync("./mapping.json", JSON.stringify({ char2idx, idx2char }));
-
-  console.log("Model saved.");
-})();
