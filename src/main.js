@@ -12,8 +12,6 @@ const __dirname = path.dirname(__filename);
 const dataPath = path.join(__dirname, "data", "dataset.json");
 const data = fs.readFileSync(dataPath, "utf-8");
 
-// call training
 train(data);
-
-// call generation
-generate();
+console.log("🎉 Moving to generation step...");
+generate(150); // generate 150 words

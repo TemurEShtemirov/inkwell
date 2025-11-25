@@ -1,7 +1,18 @@
 import fs from "fs";
 
-export function generate() {
+export function generate(length = 100) {
   const tokens = JSON.parse(fs.readFileSync("tokens.json", "utf-8"));
-  const sample = tokens.slice(0, 50).join(" "); // just a simple generation
-  console.log("Generated text:", sample);
+  const markov = JSON.parse(fs.readFileSync("markov.json", "utf-8"));
+
+  let output = [];
+  let word = tokens[Math.floor(Math.random() * tokens.length)];
+
+  for (let i = 0; i < length; i++) {
+    output.push(word);
+    const nextWords = markov[word];
+    if (!nextWords) break; // stop if no continuation
+    word = nextWords[Math.floor(Math.random() * nextWords.length)];
+  }
+
+  console.log("📝 Generated text:\n", output.join(" "));
 }
