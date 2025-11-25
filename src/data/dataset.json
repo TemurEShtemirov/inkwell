@@ -1,0 +1,204 @@
+{
+  "resumes": [
+    {
+      "id": 1,
+      "profession": "Software Engineer",
+      "text": "Experienced software engineer skilled in JavaScript, Node.js, and cloud deployment. Developed scalable APIs, improved system performance, and collaborated with cross-functional teams to deliver high-impact products."
+    },
+    {
+      "id": 2,
+      "profession": "Doctor",
+      "text": "Dedicated medical doctor with experience in patient diagnosis, emergency care, and treatment planning. Skilled in maintaining patient records, collaborating with specialists, and ensuring high-quality healthcare services."
+    },
+    {
+      "id": 3,
+      "profession": "Teacher",
+      "text": "Passionate educator with a background in curriculum development, student progress assessment, and classroom management. Focused on creating an engaging learning environment that supports academic growth."
+    },
+    {
+      "id": 4,
+      "profession": "Graphic Designer",
+      "text": "Creative graphic designer specializing in branding, visual identity, and digital illustration. Experienced with Adobe Creative Suite and developing modern design concepts for clients across multiple industries."
+    },
+    {
+      "id": 5,
+      "profession": "Civil Engineer",
+      "text": "Civil engineer with experience in structural analysis, site inspections, and infrastructure planning. Skilled in AutoCAD, project supervision, and implementing cost-effective engineering solutions."
+    },
+    {
+      "id": 6,
+      "profession": "Nurse",
+      "text": "Compassionate nurse with expertise in patient care, medication administration, and emergency response. Ensures safety and comfort while supporting patients during recovery."
+    },
+    {
+      "id": 7,
+      "profession": "Electrician",
+      "text": "Certified electrician with hands-on experience in wiring, troubleshooting, and maintaining electrical systems. Skilled in reading technical plans and ensuring compliance with safety standards."
+    },
+    {
+      "id": 8,
+      "profession": "Chef",
+      "text": "Professional chef with experience in menu creation, food preparation, and kitchen leadership. Skilled in international cuisine, plating aesthetics, and maintaining high culinary standards."
+    },
+    {
+      "id": 9,
+      "profession": "Accountant",
+      "text": "Detail-oriented accountant specializing in financial reporting, budgeting, and tax preparation. Experienced in using accounting software to monitor cash flow and maintain accurate records."
+    },
+    {
+      "id": 10,
+      "profession": "Lawyer",
+      "text": "Experienced lawyer with a background in contract negotiation, legal research, and case preparation. Skilled in advising clients and representing them in legal proceedings."
+    },
+    {
+      "id": 11,
+      "profession": "Digital Marketer",
+      "text": "Digital marketing specialist skilled in SEO, content strategy, social media management, and analytics. Proven ability to increase brand visibility and generate targeted traffic."
+    },
+    {
+      "id": 12,
+      "profession": "Photographer",
+      "text": "Creative photographer experienced in portrait, product, and event photography. Skilled in lighting techniques, photo editing, and producing visually compelling images."
+    },
+    {
+      "id": 13,
+      "profession": "Mechanical Engineer",
+      "text": "Mechanical engineer with experience in machine design, prototyping, and system testing. Skilled in CAD modeling and developing reliable mechanical solutions."
+    },
+    {
+      "id": 14,
+      "profession": "Architect",
+      "text": "Architect experienced in designing residential and commercial buildings, creating 3D models, and managing construction documentation. Focused on functional and sustainable design."
+    },
+    {
+      "id": 15,
+      "profession": "Project Manager",
+      "text": "Experienced project manager with strong skills in planning, task delegation, and risk management. Successfully led cross-functional teams to deliver projects on time and within budget."
+    },
+    {
+      "id": 16,
+      "profession": "Sales Manager",
+      "text": "Sales manager with experience in building client relationships, analyzing market trends, and leading sales teams to achieve revenue targets."
+    },
+    {
+      "id": 17,
+      "profession": "Data Analyst",
+      "text": "Data analyst skilled in data cleaning, visualization, and statistical modeling. Proficient in SQL, Python, and building dashboards for business insights."
+    },
+    {
+      "id": 18,
+      "profession": "Barber",
+      "text": "Professional barber providing modern haircuts, grooming, and beard styling. Skilled in customer service and maintaining a clean, organized workspace."
+    },
+    {
+      "id": 19,
+      "profession": "Mechanic",
+      "text": "Skilled mechanic experienced in diagnosing vehicle issues, performing repairs, and conducting maintenance checks to ensure optimal performance."
+    },
+    {
+      "id": 20,
+      "profession": "Translator",
+      "text": "Translator fluent in multiple languages with experience in document translation, interpretation, and cultural adaptation of content."
+    },
+    {
+      "id": 21,
+      "profession": "Pilot",
+      "text": "Licensed pilot with experience in both domestic and international flights. Skilled in navigation, communication, and ensuring passenger safety."
+    },
+    {
+      "id": 22,
+      "profession": "Dentist",
+      "text": "Experienced dentist specializing in oral examinations, dental procedures, and patient education. Skilled in using modern dental equipment."
+    },
+    {
+      "id": 23,
+      "profession": "UX/UI Designer",
+      "text": "UX/UI designer with experience in user research, wireframing, prototyping, and creating intuitive interfaces focused on user experience."
+    },
+    {
+      "id": 24,
+      "profession": "Content Writer",
+      "text": "Creative content writer specializing in blogs, website copy, and storytelling. Skilled in crafting engaging and SEO-friendly content."
+    },
+    {
+      "id": 25,
+      "profession": "Fitness Trainer",
+      "text": "Certified fitness trainer experienced in creating workout programs, coaching clients, and promoting healthy lifestyles."
+    },
+    {
+      "id": 26,
+      "profession": "Human Resources Specialist",
+      "text": "HR specialist skilled in recruitment, employee onboarding, and conflict resolution. Focused on building strong workplace culture."
+    },
+    {
+      "id": 27,
+      "profession": "Economist",
+      "text": "Economist specializing in data analysis, economic forecasting, and market research. Skilled in preparing reports and advising businesses."
+    },
+    {
+      "id": 28,
+      "profession": "Pharmacist",
+      "text": "Licensed pharmacist experienced in dispensing medication, counseling patients, and maintaining accurate pharmaceutical records."
+    },
+    {
+      "id": 29,
+      "profession": "Security Guard",
+      "text": "Security guard experienced in patrolling premises, monitoring CCTV, and ensuring the safety of employees and visitors."
+    },
+    {
+      "id": 30,
+      "profession": "Logistics Coordinator",
+      "text": "Logistics coordinator skilled in supply chain management, shipment tracking, and coordinating deliveries to maintain efficiency."
+    },
+    {
+      "id": 31,
+      "profession": "Interior Designer",
+      "text": "Interior designer with experience in spatial planning, color coordination, and creating functional and aesthetically pleasing environments."
+    },
+    {
+      "id": 32,
+      "profession": "Bank Teller",
+      "text": "Bank teller experienced in handling transactions, assisting customers, and maintaining financial accuracy."
+    },
+    {
+      "id": 33,
+      "profession": "Plumber",
+      "text": "Experienced plumber skilled in installing, repairing, and maintaining water systems, pipes, and fixtures."
+    },
+    {
+      "id": 34,
+      "profession": "Librarian",
+      "text": "Librarian with experience in cataloging books, assisting readers, and organizing educational programs."
+    },
+    {
+      "id": 35,
+      "profession": "Chef Assistant",
+      "text": "Assistant chef skilled in food prep, maintaining kitchen cleanliness, and supporting the head chef during service."
+    },
+    {
+      "id": 36,
+      "profession": "Social Worker",
+      "text": "Social worker with experience in community support, case management, and helping individuals access essential services."
+    },
+    {
+      "id": 37,
+      "profession": "Veterinarian",
+      "text": "Veterinarian experienced in animal care, examinations, surgeries, and educating pet owners on proper health practices."
+    },
+    {
+      "id": 38,
+      "profession": "Journalist",
+      "text": "Journalist skilled in researching, interviewing, and writing compelling news stories with accuracy and clarity."
+    },
+    {
+      "id": 39,
+      "profession": "Event Manager",
+      "text": "Event manager with experience in planning, logistics, vendor coordination, and executing successful corporate and social events."
+    },
+    {
+      "id": 40,
+      "profession": "Mobile App Developer",
+      "text": "Mobile app developer skilled in React Native, Android, and iOS development. Experienced in building cross-platform applications with modern UI."
+    }
+  ]
+}
